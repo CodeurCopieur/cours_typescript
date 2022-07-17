@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "target": "ES2015",
+    "noEmitOnError": true, // (true) En cas d'erreur il ne génère pas de fichier,
+    "strict": true// active une verfication strict
+  },
+  "files": [
+    "src/app.ts"
+  ]
+}

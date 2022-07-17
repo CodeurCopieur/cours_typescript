@@ -1,0 +1,23 @@
+{
+  "name": "cours_typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codwerk/cours_typescript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codwerk/cours_typescript/issues"
+  },
+  "homepage": "https://github.com/codwerk/cours_typescript#readme",
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  }
+}
