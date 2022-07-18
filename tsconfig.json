@@ -6,6 +6,6 @@
     "strict": true// active une verfication strict
   },
   "files": [
-    "src/app.ts"
+    "src/base.ts"
   ]
 }
