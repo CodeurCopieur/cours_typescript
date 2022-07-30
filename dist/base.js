@@ -34,4 +34,12 @@ myObject = {
 let myAny;
 myAny.trim();
 let myUnknow;
-// myUnknow.trim(); -> erreur
+let john = {
+    name: "John",
+    age: 27
+};
+let dembele = {
+    name: "Dembele",
+    age: 25,
+    isVip: true
+};

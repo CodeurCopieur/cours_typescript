@@ -48,3 +48,28 @@ myAny.trim();
 
 let myUnknow: unknown;
 // myUnknow.trim(); -> erreur
+
+// Interface : décrit un object + complexe
+interface User {
+  readonly name: string, // readonly : on ne doit pas modifier
+  age: number
+  employed ?: boolean // ?: propriété optionnel
+}
+
+let john: User = {
+  name: "John",
+  age: 27
+}
+
+// john.name = "codwerk" // -> indication mais ne bloque pas la compilation
+
+// Entendre les interfaces (créer une interface à partir d'une interface)
+interface UserVip extends User {
+  isVip: true
+}
+
+let dembele: UserVip = {
+  name: "Dembele",
+  age: 25,
+  isVip: true
+}
