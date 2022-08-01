@@ -3,7 +3,8 @@
     "outDir": "dist",
     "target": "ES2015",
     "noEmitOnError": true, // (true) En cas d'erreur il ne génère pas de fichier,
-    "strict": true// active une verfication strict
+    "strict": true,// active une verfication strict
+    // "noImplicitAny": true
   },
   "files": [
     "src/base.ts"
