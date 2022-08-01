@@ -73,3 +73,38 @@ let dembele: UserVip = {
   age: 25,
   isVip: true
 }
+
+// Type Aliases
+type myBoolean = true | false;
+type stringOrNum = string | number;
+let x : stringOrNum;
+x = "4";
+x = 4;
+
+// Generics
+interface Box<Type>{
+  a: Type
+}
+
+let myBox: Box<number> = {
+  a: 10
+}
+
+// Function
+
+function add(a: number, b: number): number {
+  return a + b
+}
+
+function sous(a: number, b: number): void {
+  console.log(a - b);
+}
+
+add(5, 6)
+add(3, 4)
+
+function echo<T>(x: T): T {
+  return x
+}
+
+echo(5)

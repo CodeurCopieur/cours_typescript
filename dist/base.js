@@ -43,3 +43,22 @@ let dembele = {
     age: 25,
     isVip: true
 };
+let x;
+x = "4";
+x = 4;
+let myBox = {
+    a: 10
+};
+// Function
+function add(a, b) {
+    return a + b;
+}
+function sous(a, b) {
+    console.log(a - b);
+}
+add(5, 6);
+add(3, 4);
+function echo(x) {
+    return x;
+}
+echo(5);
