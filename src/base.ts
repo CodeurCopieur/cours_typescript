@@ -105,6 +105,23 @@ add(3, 4)
 
 function echo<T>(x: T): T {
   return x
+};
+
+echo(5);
+
+// Classe
+
+class UserAccount {
+  name: string;
+  id: number;
+
+  constructor(name: string, id: number) {
+    this.name = name;
+    this.id = id;
+  }
+
+  // constructor(private name: string, private id: number){}
+  // seconde méthode
 }
 
-echo(5)
+const newUser = new UserAccount("cod", 1);

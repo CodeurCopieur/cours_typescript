@@ -61,4 +61,13 @@ add(3, 4);
 function echo(x) {
     return x;
 }
+;
 echo(5);
+// Classe
+class UserAccount {
+    constructor(name, id) {
+        this.name = name;
+        this.id = id;
+    }
+}
+const newUser = new UserAccount("cod", 1);
