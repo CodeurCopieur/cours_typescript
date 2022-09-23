@@ -8,6 +8,7 @@
   },
   "files": [
     // "src/base0.ts",
-    "src/base.ts"
+    // "src/base.ts"
+    "src/narrowing.ts"
   ]
 }
