@@ -1,73 +1,37 @@
 "use strict";
-// static type checker : verifier le type des objects et variables
-// Union types
-let a;
-a = 5;
-a = "5";
-let b;
-// b = true; -> erreur
-// Literal types : la valeur est gauche ou droite
-let d;
-d = "droite";
-// d = "centre" -> erreur
-// Type assertion : aide ts a comprend le type d'element
-const btn = document.querySelector('.btn');
-// Liste des interfaces : https://developer.mozilla.org/fr/docs/Web/API
-// Array
-let myArray;
-myArray = [1, 2, 3, 4];
-let myArrayDouble;
-myArrayDouble = [[1, 2, 3, 4], [5, 6, 7, 8]];
-// Tupels 
-let complexeArray;
-complexeArray = [2, "ok", true];
-let multiArray;
-multiArray = [4, 5, "john", 4];
-// Object
-// any : n'importe quel type - Piège
-let myObject;
-myObject = {
-    a: 5,
-    b: "5"
+// console.log('hello :)');
+// const compteur = document.querySelector('#compteur');
+// let i = 0;
+// const incre = (e) => {
+//   i++;
+//   compteur.querySelector('span').innerText = i.toString() 
+// }
+// compteur.addEventListener('click', incre)
+const a = "typescript";
+const b = 3;
+const c = true;
+const d = null;
+const arr = ['a', 'b', 'c'];
+const user = { firstname: "dev", lastname: "front" };
+// const user: {firstname: string, lastname?: string} = {firstname: "dev", lastname: "front"}
+const date = new Date();
+const cb = (e) => {
+    console.log(e);
 };
-// Any || Unknown (différences)
-let myAny;
-myAny.trim();
-let myUnknow;
-let john = {
-    name: "John",
-    age: 27
-};
-let dembele = {
-    name: "Dembele",
-    age: 25,
-    isVip: true
-};
-let x;
-x = "4";
-x = 4;
-let myBox = {
-    a: 10
-};
-// Function
-function add(a, b) {
-    return a + b;
+const cptr = document.querySelector('#compteur');
+const cptr2 = document.querySelector('#compteur');
+function printId(id) {
+    console.log(id.toString());
 }
-function sous(a, b) {
-    console.log(a - b);
-}
-add(5, 6);
-add(3, 4);
-function echo(x) {
-    return x;
-}
-;
-echo(5);
-// Classe
-class UserAccount {
-    constructor(name, id) {
-        this.name = name;
-        this.id = id;
+const compteur = document.querySelector('#compteur');
+let i = 0;
+const incre = (e) => {
+    e.preventDefault();
+    i++;
+    const span = compteur === null || compteur === void 0 ? void 0 : compteur.querySelector('span');
+    if (span) {
+        span.innerText = i.toString();
     }
-}
-const newUser = new UserAccount("cod", 1);
+};
+compteur === null || compteur === void 0 ? void 0 : compteur.addEventListener('click', incre);
+// ? utilise addEeventListener si le compteur existe

@@ -7,7 +7,7 @@
     // "noImplicitAny": true
   },
   "files": [
-    // "src/base.ts",
-    "src/app.ts"
+    // "src/base0.ts",
+    "src/base.ts"
   ]
 }

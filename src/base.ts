@@ -1,127 +1,51 @@
-// static type checker : verifier le type des objects et variables
+// console.log('hello :)');
 
-// Union types
-let a: number | string;
-a = 5;
-a = "5";
+// const compteur = document.querySelector('#compteur');
 
-let b:number;
-// b = true; -> erreur
+// let i = 0;
 
-// Literal types : la valeur est gauche ou droite
-let d: "gauche" | "droite";
+// const incre = (e) => {
+//   i++;
+//   compteur.querySelector('span').innerText = i.toString() 
+// }
 
-d = "droite"
-// d = "centre" -> erreur
+// compteur.addEventListener('click', incre)
 
-// Type assertion : aide ts a comprend le type d'element
-const btn = <HTMLButtonElement>document.querySelector('.btn')
-// Liste des interfaces : https://developer.mozilla.org/fr/docs/Web/API
+const a : string = "typescript";
+const b : number = 3;
+const c : boolean = true;
+const d : null = null;
+const arr : string[] = ['a', 'b', 'c'];
+const user: {firstname: string, [key: string]: string} = {firstname: "dev", lastname: "front"};
+// const user: {firstname: string, lastname?: string} = {firstname: "dev", lastname: "front"}
+const date: Date =  new Date();
 
-
-// Array
-let myArray: number[];
-myArray = [1, 2, 3, 4]
-
-let myArrayDouble: number[][];
-myArrayDouble = [[1, 2, 3, 4], [5, 6, 7, 8]]
-
-// Tupels 
-let complexeArray: [number, string, boolean];
-complexeArray = [2, "ok", true];
-
-let multiArray: (number | string)[];
-multiArray = [4, 5, "john", 4];
-
-// Object
-  // any : n'importe quel type - Piège
-let myObject: {a: number, b: string};
-myObject = {
-  a: 5,
-  b: "5"
+const cb : Function = (e: MouseEvent) => {
+  console.log(e);
 }
 
-// Any || Unknown (différences)
+const cptr = document.querySelector('#compteur') as HTMLButtonElement;
+const cptr2 = <HTMLButtonElement>document.querySelector('#compteur');
 
-let myAny:any;
-myAny.trim();
-
-let myUnknow: unknown;
-// myUnknow.trim(); -> erreur
-
-// Interface : décrit un object + complexe
-interface User {
-  readonly name: string, // readonly : on ne doit pas modifier
-  age: number
-  employed ?: boolean // ?: propriété optionnel
+function printId(id: number | string) {
+  console.log(id.toString());
+  
 }
 
-let john: User = {
-  name: "John",
-  age: 27
-}
+const compteur = document.querySelector('#compteur');
 
-// john.name = "codwerk" // -> indication mais ne bloque pas la compilation
+let i = 0;
 
-// Entendre les interfaces (créer une interface à partir d'une interface)
-interface UserVip extends User {
-  isVip: true
-}
+const incre = (e: Event) => {
+  e.preventDefault()
+  i++;
 
-let dembele: UserVip = {
-  name: "Dembele",
-  age: 25,
-  isVip: true
-}
+  const span = compteur?.querySelector('span');
 
-// Type Aliases
-type myBoolean = true | false;
-type stringOrNum = string | number;
-let x : stringOrNum;
-x = "4";
-x = 4;
-
-// Generics
-interface Box<Type>{
-  a: Type
-}
-
-let myBox: Box<number> = {
-  a: 10
-}
-
-// Function
-
-function add(a: number, b: number): number {
-  return a + b
-}
-
-function sous(a: number, b: number): void {
-  console.log(a - b);
-}
-
-add(5, 6)
-add(3, 4)
-
-function echo<T>(x: T): T {
-  return x
-};
-
-echo(5);
-
-// Classe
-
-class UserAccount {
-  name: string;
-  id: number;
-
-  constructor(name: string, id: number) {
-    this.name = name;
-    this.id = id;
+  if(span) {
+    span.innerText = i.toString() 
   }
-
-  // constructor(private name: string, private id: number){}
-  // seconde méthode
 }
 
-const newUser = new UserAccount("cod", 1);
+compteur?.addEventListener('click', incre)
+// ? utilise addEeventListener si le compteur existe
