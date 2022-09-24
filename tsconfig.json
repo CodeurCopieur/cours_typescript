@@ -9,6 +9,7 @@
   "files": [
     // "src/base0.ts",
     // "src/base.ts"
-    "src/narrowing.ts"
+    // "src/narrowing.ts"
+    "src/alias_generics.ts"
   ]
 }
